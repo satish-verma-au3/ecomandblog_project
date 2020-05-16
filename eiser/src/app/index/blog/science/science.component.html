@@ -1,0 +1,36 @@
+<section class="mb-30px">
+    <div class="container">
+      <div class="hero-banner hero-banner--sm">
+        <div class="hero-banner__content">
+          <h1>Science News</h1>
+          <nav aria-label="breadcrumb" class="banner-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a [routerLink]="['/technology']">Technology</a></li>
+              <li class="breadcrumb-item"><a [routerLink]='["/health"]'>Health</a></li>
+              <li class="breadcrumb-item"><a [routerLink]='["/science"]'>Science</a></li>
+              <li class="breadcrumb-item"><a [routerLink]='["/sport"]'>Sports</a></li>
+              <li class="breadcrumb-item"><a [routerLink]='["/entertainment"]'>Entertainment</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="blog-post-area section-margin">
+    <div class="container">
+      <div class="row">
+     
+        <div *ngFor="let data of fGetData">
+          <h3>{{data.title}}</h3>
+          <p><img src="{{data.urlToImage}}" width="100%" height="300"></p>
+          <p>{{data.content}}</p>
+        </div>
+         
+       
+          </div>
+        <!-- End Blog Post Siddebar -->
+      </div>
+  </section>
